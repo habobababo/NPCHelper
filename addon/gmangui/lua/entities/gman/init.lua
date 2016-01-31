@@ -7,7 +7,7 @@ include('shared.lua') -- At this point the contents of shared.lua are ran on the
 
 function ENT:Initialize( ) --This function is run when the entity is created so it's a good place to setup our entity.
 	
-	self:SetModel( "models/gman.mdl" ) -- Sets the model of the NPC.
+	self:SetModel( HelperNPC.NPCModel ) -- Sets the model of the NPC.
 	self:SetHullType( HULL_HUMAN ) -- Sets the hull type, used for movement calculations amongst other things.
 	self:SetHullSizeNormal( )
 	self:SetNPCState( NPC_STATE_SCRIPT )
