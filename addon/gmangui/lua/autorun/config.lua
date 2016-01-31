@@ -8,6 +8,7 @@ HelperNPC.Sites = 4 // For each size you need a HelperNPC.Text[site] = [[TEXT]]
 HelperNPC.Material = "materials/core/watermark.png" // Logo for the Background. Leave it empty <""> if no logo
 HelperNPC.Rulespage = ""
 HelperNPC.Homepage = "http://core-community.de/forum/"
+HelperNPC.NPCModel = "models/gman.mdl" // Don't use playermodels, these are looking weird :)
 
 
 HelperNPC.Text[1] = [[Enter
