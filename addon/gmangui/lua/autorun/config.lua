@@ -5,7 +5,11 @@ HelperNPC.Text = {} // Do NOT edit this pls
 HelperNPC.Titel = "Titel" // On the top of the derma
 HelperNPC.TitelOverhead = "Titel" // On the top of the NPC
 HelperNPC.Sites = 4 // For each size you need a HelperNPC.Text[site] = [[TEXT]]
-HelperNPC.Material = "materials/core/watermark.png" // Logo for the Background. Leave it empty <""> if no logo
+
+
+HelperNPC.Logo = "materials/core/watermark.png" // Logo for the Background. Leave it empty <""> if no logo
+HelperNPC.LogoX = 400 // X size of the Logo (>400<x400)
+HelperNPC.LogoY = 400 // y size of the Logo (400x>400>)
 HelperNPC.Rulespage = ""
 HelperNPC.Homepage = "http://core-community.de/forum/"
 HelperNPC.NPCModel = "models/gman.mdl" // Don't use playermodels, these are looking weird :)
