@@ -6,7 +6,7 @@ for i=10,100 do
 end
 
 local blur = Material( "pp/blurscreen" )
-local function drawPanelBlur( panel, layers, density, alpha )
+local function drawpb( panel, layers, density, alpha )
 	local x, y = panel:LocalToScreen( 0, 0 )
 
 	surface.SetDrawColor( 255, 255, 255, alpha )
@@ -50,14 +50,14 @@ local function HelperMenu()
 	MainDerma:SetDraggable(false)
 	MainDerma:MakePopup()
 	MainDerma.Paint = function(self)
-		drawPanelBlur( self, 12, 20, 200 )
+		drawpb( self, 12, 20, 200 )
 		draw.RoundedBox(4, 0, 0, 600, 600, Color(0,0,0,140))
 		draw.RoundedBox(4, 50, 50, 500, 500, Color(0,0,0,140))
 		
 		if HelperNPC.Material != "" then
-			surface.SetMaterial( Material(HelperNPC.Material) )
+			surface.SetMaterial( Material(HelperNPC.Logo) )
 			surface.SetDrawColor(255, 255, 255, 3)
-			surface.DrawTexturedRect(MainDerma:GetWide() / 2 - 200, MainDerma:GetTall() / 2 - 200, 400, 400 )
+			surface.DrawTexturedRect(MainDerma:GetWide() / 2 - HelperNPC.LogoX / 2, MainDerma:GetTall() / 2 - HelperNPC.LogoY / 2, 400, 400 )
 		end
 	end
 	
