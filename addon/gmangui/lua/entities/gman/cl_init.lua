@@ -30,7 +30,7 @@ hook.Add("PostDrawOpaqueRenderables", "gmodhelper", function()
 			Ang:RotateAroundAxis( Ang:Right(), -90)
 		
 			cam.Start3D2D(ent:GetPos()+ent:GetUp()*80, Ang, 0.35)
-				draw.SimpleTextOutlined( HelperNPC.TitelOverhead , "CoreFont30", 0, 0, Color( 230, 255, 255, 255 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_TOP, 1, Color(0, 0, 0, 255))			
+				draw.SimpleTextOutlined( HelperNPC.TitleOverhead , "CoreFont30", 0, 0, Color( 230, 255, 255, 255 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_TOP, 1, Color(0, 0, 0, 255))			
 			cam.End3D2D()
 		end
 	end
@@ -71,15 +71,15 @@ local function HelperMenu()
 	end
 	
 	surface.SetFont("CoreFont40")
-	local TitelSize = surface.GetTextSize(HelperNPC.Titel)
+	local TitleSize = surface.GetTextSize(HelperNPC.Title)
 	
 	
-	Titel = vgui.Create( "DLabel", MainDerma )
-	Titel:SetSize(TitelSize, 30)
-	Titel:SetPos( MainDerma:GetWide() / 2 - Titel:GetWide() / 2 , 10)
-	Titel:SetFont("CoreFont40")
-	Titel:SetTextColor(Color(255,255,255))
-	Titel:SetText(HelperNPC.Titel)
+	Title = vgui.Create( "DLabel", MainDerma )
+	Title:SetSize(TitleSize, 30)
+	Title:SetPos( MainDerma:GetWide() / 2 - Title:GetWide() / 2 , 10)
+	Title:SetFont("CoreFont40")
+	Title:SetTextColor(Color(255,255,255))
+	Title:SetText(HelperNPC.Title)
 	
 	LabelQ = vgui.Create( "DLabel", MainDerma )
 	LabelQ:SetSize(600, 600)
