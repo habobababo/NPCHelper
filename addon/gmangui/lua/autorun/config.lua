@@ -2,8 +2,8 @@
 HelperNPC = {} // Do NOT edit this pls
 HelperNPC.Text = {} // Do NOT edit this pls
 
-HelperNPC.Titel = "Titel" // On the top of the derma
-HelperNPC.TitelOverhead = "Titel" // On the top of the NPC
+HelperNPC.Title = "Title" // On the top of the derma
+HelperNPC.TitleOverhead = "Title" // On the top of the NPC
 HelperNPC.Sites = 4 // For each size you need a HelperNPC.Text[site] = [[TEXT]]
 
 
