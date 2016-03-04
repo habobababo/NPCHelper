@@ -1,49 +1,32 @@
+HelperNPC = {} -- Do not edit this line
+HelperNPC.Text = {} -- Do not edit this line
 
-HelperNPC = {} // Do NOT edit this pls
-HelperNPC.Text = {} // Do NOT edit this pls
+HelperNPC.Title = "Title" -- Title of the derma panel
+HelperNPC.TitleOverhead = "Title" -- Title that floats over the NPC's head
+HelperNPC.Sites = 4 -- For each site you need a HelperNPC.Text[*sitenumber*] = [[TEXT]]
 
-HelperNPC.Title = "Title" // On the top of the derma
-HelperNPC.TitleOverhead = "Title" // On the top of the NPC
-HelperNPC.Sites = 4 // For each size you need a HelperNPC.Text[site] = [[TEXT]]
+HelperNPC.Logo = "materials/core/watermark.png" -- Logo for the Background. Leave it empty <""> if no logo
+HelperNPC.LogoX = 400 -- X size of the Logo (X, Y). This is horizontal.
+HelperNPC.LogoY = 400 -- Y size of the Logo (X, Y). This is vertical.
+HelperNPC.Rulespage = "" -- URL of your rules. Leave empty for nothing.
+HelperNPC.Homepage = "http://core-community.de/forum/" -- URL of your website.
+HelperNPC.NPCModel = "models/gman.mdl" -- Model of the NPC.
 
+--[[--------
+The following are like different pages of your derma panel. Change to your liking, add another for each site.
 
-HelperNPC.Logo = "materials/core/watermark.png" // Logo for the Background. Leave it empty <""> if no logo
-HelperNPC.LogoX = 400 // X size of the Logo (>400<x400)
-HelperNPC.LogoY = 400 // y size of the Logo (400x>400>)
-HelperNPC.Rulespage = ""
-HelperNPC.Homepage = "http://core-community.de/forum/"
-HelperNPC.NPCModel = "models/gman.mdl" // Don't use playermodels, these are looking weird :)
+Each site, by default, are multi-line string values. You could change the brackets to quotes. But if you do this, it is only a single-line string value.
+]]----------
+HelperNPC.Text[1] = [[Text
+(site 1)]]
+HelperNPC.Text[2] = [[Text
+(site 2)]]
+HelperNPC.Text[3] = [[Text
+(site 3)]]
+HelperNPC.Text[4] = [[Text
+(site 4)]]
 
-
-HelperNPC.Text[1] = [[Enter
-the
-first
-text
-on
-size
-one
-]]
-
-HelperNPC.Text[2] = [[Enter
-the
-second
-text
-on
-size
-two
-]]
-HelperNPC.Text[3] = [[..
-..
-..
-]]
-HelperNPC.Text[4] = [[..
-..
-..
-]]
-
-
-
-// DO NOT EDIT THIS or MAYBE?
+-- Make the players download the materials. This is best left alone.
 
 if SERVER then
 	resource.AddFile(HelperNPC.Material)
