@@ -123,32 +123,33 @@ local function HelperMenu()
 			self.hover = false
 		end		
 	end
-		
-	local SiteButton = vgui.Create("DButton", MainDerma)
-	SiteButton:SetPos(MainDerma:GetWide() - 45, MainDerma:GetTall() - 45)
-	SiteButton:SetText("")
-	SiteButton:SetSize(35, 35)
-	SiteButton:SetText("")
-	SiteButton:SetFont("CoreFont20")
-	SiteButton.DoClick = function()
-		surface.PlaySound("ui/buttonclickrelease.wav") 
-		gui.OpenURL(HelperNPC.Homepage)
-	end
-	SiteButton.Paint = function(self)
-		surface.SetMaterial(Material("materials/core/home.png"))
-		surface.SetDrawColor(255, 255, 255, 255)
-		surface.DrawTexturedRect(2, 2, 32, 32)
-		if self.hover then
-			draw.RoundedBox(4, 0, 0, SiteButton:GetWide(), SiteButton:GetTall(), Color(0, 0, 0, 40))
-		else
-			draw.RoundedBox(4, 0, 0, SiteButton:GetWide(), SiteButton:GetTall(), Color(40, 40, 40, 100))
+	for i = 1, HelperNPC.Buttons do
+		local DownerButton = vgui.Create("DButton", MainDerma)
+		DownerButton:SetPos(MainDerma:GetWide() - i * 45, MainDerma:GetTall()  -  45)
+		DownerButton:SetText("")
+		DownerButton:SetSize(35, 35)
+		DownerButton:SetText("")
+		DownerButton:SetFont("CoreFont20")
+		DownerButton.DoClick = function()
+			surface.PlaySound("ui/buttonclickrelease.wav") 
+			gui.OpenURL(HelperNPC.Link[i])
 		end
-	end
-	SiteButton.OnCursorEntered = function(self)
-		self.hover = true
-	end
-	SiteButton.OnCursorExited = function(self)
-		self.hover = false
+		DownerButton.Paint = function(self)
+			surface.SetMaterial(Material(HelperNPC.ButtonMat[i]))
+			surface.SetDrawColor(255, 255, 255, 255)
+			surface.DrawTexturedRect(2, 2, 32, 32)
+			if self.hover then
+				draw.RoundedBox(4, 0, 0, DownerButton:GetWide(), DownerButton:GetTall(), Color(40, 40, 40, 100))
+			else
+				draw.RoundedBox(4, 0, 0, DownerButton:GetWide(), DownerButton:GetTall(), Color(0, 0, 0, 40))
+			end
+		end
+		DownerButton.OnCursorEntered = function(self)
+			self.hover = true
+		end
+		DownerButton.OnCursorExited = function(self)
+			self.hover = false
+		end
 	end
 	
 	
