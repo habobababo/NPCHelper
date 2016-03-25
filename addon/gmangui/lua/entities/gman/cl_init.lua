@@ -28,7 +28,7 @@ hook.Add("PostDrawOpaqueRenderables", "gmodhelper", function()
 			Ang:RotateAroundAxis(Ang:Forward(), 90)
 			Ang:RotateAroundAxis(Ang:Right(), -90)
 		
-			cam.Start3D2D(ent:GetPos() + ent:GetUp() * 80, Ang, 0.35)
+			cam.Start3D2D(ent:GetPos() + ent:GetUp() * 85, Ang, 0.35)
 				draw.SimpleTextOutlined(HelperNPC.TitleOverhead, "CoreFont30", 0, 0, Color(230, 255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_TOP, 1, Color(0, 0, 0, 255))			
 			cam.End3D2D()
 		end
