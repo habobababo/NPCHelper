@@ -1,15 +1,22 @@
 HelperNPC = {} -- Do not edit this line
 HelperNPC.Text = {} -- Do not edit this line
-
+HelperNPC.ButtonMat = {}
+HelperNPC.Link = {}
 HelperNPC.Title = "Title" -- Title of the derma panel
 HelperNPC.TitleOverhead = "Title" -- Title that floats over the NPC's head
 HelperNPC.Sites = 4 -- For each site you need a HelperNPC.Text[*sitenumber*] = [[TEXT]]
+
+HelperNPC.Buttons = 2
+
+HelperNPC.ButtonMat[1] = "materials/core/home.png" -- 32x32 png to your Homepage Icon
+HelperNPC.ButtonMat[2] = "materials/core/dl.png" --	32x32 png to your download Icon
+
 
 HelperNPC.Logo = "materials/core/watermark.png" -- Logo for the Background. Leave it empty <""> if no logo
 HelperNPC.LogoX = 400 -- X size of the Logo (X, Y). This is horizontal.
 HelperNPC.LogoY = 400 -- Y size of the Logo (X, Y). This is vertical.
 HelperNPC.Rulespage = "" -- URL of your rules. Leave empty for nothing.
-HelperNPC.Homepage = "http://core-community.de/forum/" -- URL of your website.
+
 HelperNPC.NPCModel = "models/gman.mdl" -- Model of the NPC.
 
 --[[--------
@@ -26,10 +33,17 @@ HelperNPC.Text[3] = [[Text
 HelperNPC.Text[4] = [[Text
 (site 4)]]
 
+HelperNPC.Link[1] = "http://core-community.de/forum/" -- URL of your website.
+HelperNPC.Link[2] = "http://steamcommunity.com/sharedfiles/filedetails/?id=651738867" -- URL of your Workshop Content
+
 -- Make the players download the materials. This is best left alone.
 
 if SERVER then
 	resource.AddFile(HelperNPC.Material)
 	resource.AddFile("materials/core/close.png")
-	resource.AddFile("materials/core/home.png")
+	
+	for i = 1, HelperNPC.Buttons do
+		resource.AddFile(HelperNPC.ButtonMat[i])
+	end
+	
 end
