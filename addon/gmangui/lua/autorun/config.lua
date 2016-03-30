@@ -39,11 +39,8 @@ HelperNPC.Link[2] = "http://steamcommunity.com/sharedfiles/filedetails/?id=65173
 -- Make the players download the materials. This is best left alone.
 
 if SERVER then
-	resource.AddFile(HelperNPC.Material)
 	resource.AddFile("materials/core/close.png")
-	
 	for i = 1, HelperNPC.Buttons do
 		resource.AddFile(HelperNPC.ButtonMat[i])
 	end
-	
 end
